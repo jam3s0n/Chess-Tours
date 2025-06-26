@@ -1,3 +1,2 @@
-# Chess-Tours
-Simulating different chess tours
-The knight chess tour is almost done!
+# Knight's Tour
+Currently uses brute force by randomly going to avaliable squares. Going to implement other algorithms in the future.
