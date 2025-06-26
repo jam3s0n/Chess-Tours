@@ -169,7 +169,7 @@ def random_method(pos, board_data):
             if count >= 64:
                 return 1
             
-            print("Out of possible moves. Tour Over")
+            print("Out of possible moves.\nAmount of squares missed:", (64-count),"\nTour Over")
             return 1
 
         # the program will randomly pick the knights path based on index values of the num list
@@ -209,7 +209,11 @@ def printBoard(board_data):
 
     for i in range(8):
         for j in range(8):
-            if board_data[i][j] < 10:
+
+            #If the knight does reach the square put an X
+            if board_data[i][j] == 0:
+                board_list[1 + ((15-2*i)*36 ) + (4+4*j)] = "X"
+            elif board_data[i][j] < 10:
                 board_list[1 + ((15-2*i)*36 ) + (4+4*j)] = str(board_data[i][j])
             else:
                 #once the count goes to the double digits there is no way to center it so I just align it left of the box
